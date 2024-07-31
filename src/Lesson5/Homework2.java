@@ -1,12 +1,10 @@
-package Lesson4;
+package Lesson5;
 
-public class Homework {
+public class Homework2 {
     public static void main(String[] args)
     {
         StudentTest ST = new StudentTest();
-        ST.vlad.printData();
-        ST.ariva.printData();
-        ST.vanya.printData();
+        Student.printAverange(ST.ariva);
     }
 }
 
@@ -21,7 +19,7 @@ class Student
     double averageForeignLanguageScore;
 
     Student(int studentCardNumber, String firstName, String secondName, int yearLesson,
-        double averageMathScore, double averageEconomyScore, double averageForeignLanguageScore)
+            double averageMathScore, double averageEconomyScore, double averageForeignLanguageScore)
     {
         this.studentCardNumber = studentCardNumber;
         this.firstName = firstName;
@@ -37,6 +35,13 @@ class Student
         double averageFull = (averageMathScore + averageEconomyScore + averageForeignLanguageScore) / 3;
         System.out.println("Зовут: " + firstName + " " + secondName);
         System.out.println("Номер студенчего билета: " + studentCardNumber + ", год обучения: " + yearLesson);
+        System.out.println("Cредняя оценка по матеметике, экономике, иностранному языку: " + averageFull + "\n");
+    }
+
+    static void printAverange(Student PrintStudent)
+    {
+        double averageFull = (PrintStudent.averageMathScore + PrintStudent.averageEconomyScore
+                + PrintStudent.averageForeignLanguageScore) / 3;
         System.out.println("Cредняя оценка по матеметике, экономике, иностранному языку: " + averageFull + "\n");
     }
 }
