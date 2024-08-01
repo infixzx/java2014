@@ -1,11 +1,19 @@
 package Lesson6;
 
 public class Homework2 {
+    String t;
+
     public static void main(String[] args){
         StudentTest ST = new StudentTest();
         ST.vlad.printData();
         ST.danil.printData();
         ST.petya.printData();
+    }
+
+    public String studentTLesson7()
+    {
+        System.out.println("Сработал homework2 из Lesson6");
+        return this.t;
     }
 }
 
@@ -65,6 +73,3 @@ class StudentTest
     Student danil = new Student(12, "Данил", "Пересветов", 2017);
     Student petya = new Student();
 }
-
-
-
